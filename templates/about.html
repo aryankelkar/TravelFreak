@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <!-- Hero Banner -->
+  <div class="bg-dark text-white text-center py-5 mb-5" 
+       style="background: url('https://source.unsplash.com/1600x500/?travel,adventure') no-repeat center/cover;">
+    <div class="bg-dark bg-opacity-50 p-5 rounded">
+      <h1 class="display-4 fw-bold">About TravelFreak</h1>
+      <p class="lead">Your All-in-One Smart Travel Companion</p>
+      <a href="/features" class="btn btn-primary btn-lg mt-3">Discover Features</a>
+    </div>
+  </div>
+
+  <!-- Mission & Vision -->
+  <div class="row text-center">
+    <div class="col-md-6 mb-4">
+      <div class="card shadow h-100 border-0">
+        <div class="card-body">
+          <h4>🌍 Our Mission</h4>
+          <p>
+            TravelFreak is built to make traveling smarter, easier, and more connected. 
+            From planning trips to discovering hidden gems, we’re here to remove the stress from your journeys.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card shadow h-100 border-0">
+        <div class="card-body">
+          <h4>✨ Our Vision</h4>
+          <p>
+            To become the ultimate “super app for travelers” where community, planning, 
+            booking, and learning come together — even when you’re offline.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <!-- Hero Section -->
+  <section class="hero text-center d-flex align-items-center justify-content-center">
+    <div class="container animate__animated animate__fadeIn">
+      <h1>Welcome to <span class="brand">TravelFreak 🌍</span></h1>
+      <p class="lead">Your all-in-one smart travel companion</p>
+      <a href="{{ url_for('features') }}" class="btn btn-primary btn-lg mt-3 animate__animated animate__pulse animate__infinite">✨ Explore Features</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5 animate__animated animate__fadeInUp">Why Choose TravelFreak?</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4 animate__animated animate__zoomIn">
+            <h3>🗺️ Smart Planning</h3>
+            <p>AI-powered itineraries tailored to your style of travel.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4 animate__animated animate__zoomIn" style="animation-delay:0.2s;">
+            <h3>🤝 Community</h3>
+            <p>Connect with travelers, share tips, and find travel buddies.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm text-center p-4 animate__animated animate__zoomIn" style="animation-delay:0.4s;">
+            <h3>🎯 Gamification</h3>
+            <p>Earn rewards and unlock challenges as you explore.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta text-center text-white">
+    <div class="container animate__animated animate__fadeInUp">
+      <h2 >🌟 Ready to start your journey?</h2>
+      <p>Join TravelFreak today and make your travels smarter, fun, and unforgettable.</p>
+      <a href="{{ url_for('community') }}" class="btn btn-success btn-lg mt-2">🚀 Join Community</a>
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel -->
+  <section class="testimonials py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">What Travelers Say 💬</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center">
+            <blockquote class="blockquote">
+              <p>"TravelFreak made my Europe trip stress-free and fun!"</p>
+              <footer class="blockquote-footer">Priya Sharma</footer>
+            </blockquote>
+          </div>
+          <div class="carousel-item text-center">
+            <blockquote class="blockquote">
+              <p>"The AI itinerary planner is a game-changer. Highly recommended!"</p>
+              <footer class="blockquote-footer">Rahul Mehta</footer>
+            </blockquote>
+          </div>
+          <div class="carousel-item text-center">
+            <blockquote class="blockquote">
+              <p>"Loved the rewards! Made exploring new cities even more exciting."</p>
+              <footer class="blockquote-footer">Ananya Patel</footer>
+            </blockquote>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
