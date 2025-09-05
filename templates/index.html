@@ -38,47 +38,95 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="cta text-center text-white">
-    <div class="container animate__animated animate__fadeInUp">
-      <h2 >🌟 Ready to start your journey?</h2>
-      <p>Join TravelFreak today and make your travels smarter, fun, and unforgettable.</p>
-      <a href="{{ url_for('community') }}" class="btn btn-success btn-lg mt-2">🚀 Join Community</a>
-    </div>
-  </section>
+<section class="cta text-center text-white py-5" style="background: linear-gradient(135deg, #000000, #222222);">
+  <div class="container animate__animated animate__fadeInUp">
+    <h2 style="color: #FFD700;">🌟 Ready to start your journey?</h2>
+    <p style="color: #f1f1f1; font-size: 1.2rem;">
+      Join TravelFreak today and make your travels smarter, fun, and unforgettable.
+    </p>
+    <a href="{{ url_for('community') }}" class="btn btn-success btn-lg mt-3 shadow">
+      🚀 Join Community
+    </a>
+  </div>
+</section>
 
-  <!-- Testimonials Carousel -->
-  <section class="testimonials py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5">What Travelers Say 💬</h2>
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active text-center">
-            <blockquote class="blockquote">
-              <p>"TravelFreak made my Europe trip stress-free and fun!"</p>
-              <footer class="blockquote-footer">Priya Sharma</footer>
-            </blockquote>
-          </div>
-          <div class="carousel-item text-center">
-            <blockquote class="blockquote">
-              <p>"The AI itinerary planner is a game-changer. Highly recommended!"</p>
-              <footer class="blockquote-footer">Rahul Mehta</footer>
-            </blockquote>
-          </div>
-          <div class="carousel-item text-center">
-            <blockquote class="blockquote">
-              <p>"Loved the rewards! Made exploring new cities even more exciting."</p>
-              <footer class="blockquote-footer">Ananya Patel</footer>
-            </blockquote>
+
+  <!-- Testimonials Section -->
+<section class="testimonials py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">What Travelers Say 💬</h2>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+          <div class="card border-0 shadow-sm p-4 mx-auto text-center" style="max-width:650px;">
+            <p class="fs-5 fst-italic text-muted mb-3">
+              “TravelFreak made my Europe trip stress-free and fun!”
+            </p>
+            <small class="text-secondary d-block">— Priya Sharma</small>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
+
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+          <div class="card border-0 shadow-sm p-4 mx-auto text-center" style="max-width:650px;">
+            <p class="fs-5 fst-italic text-muted mb-3">
+              “The AI itinerary planner is a game-changer. Highly recommended!”
+            </p>
+            <small class="text-secondary d-block">— Rahul Mehta</small>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="carousel-item">
+          <div class="card border-0 shadow-sm p-4 mx-auto text-center" style="max-width:650px;">
+            <p class="fs-5 fst-italic text-muted mb-3">
+              “Loved the rewards! Made exploring new cities even more exciting.”
+            </p>
+            <small class="text-secondary d-block">— Ananya Patel</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- Carousel indicators (dots) -->
+      <div class="carousel-indicators mt-4">
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Auto-slide script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const el = document.querySelector('#testimonialCarousel');
+    if (el) {
+      new bootstrap.Carousel(el, {
+        interval: 5000,   // slide every 5s
+        ride: 'carousel',
+        pause: 'hover',
+        wrap: true,
+        touch: true
+      });
+    }
+  });
+</script>
+
+
+
 
 {% endblock %}
